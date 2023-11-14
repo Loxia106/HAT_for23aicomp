@@ -8,14 +8,13 @@ manual_seed: 0
 #   tile_size: 512 # the higher, the more utilized GPU memory and the less performance change against the full image. must be an integer multiple of the window size.
 #   tile_pad: 32 # overlapping between adjacency patches.must be an integer multiple of the window size.
 
-# datasets:
-#   test_1:  # the 1st test dataset
-#     name: validation
-#     type: PairedImageDataset
-#     dataroot_gt: datasets/valid/hr
-#     dataroot_lq: datasets/valid/lr
-#     io_backend:
-#       type: disk
+datasets:
+  test_1:  # the 1st test dataset
+    name: test
+    type: SingleImageDataset    
+    dataroot_lq: datasets/test/lr
+    io_backend:
+      type: disk
 
 # network structures
 network_g:
